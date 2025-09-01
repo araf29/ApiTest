@@ -1,0 +1,36 @@
+<!-- Modern Login Screen with OAuth (Angular Template) -->
+<div class="login-container">
+    <div class="login-card">
+      <h2>Sign in to Your Account</h2>
+      <form>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" [(ngModel)]="userId" name="userId" placeholder="Enter your email" autocomplete="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" [(ngModel)]="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+        </div>
+        <button type="submit" class="btn primary-btn" (click)="loginSimple()">Sign In</button>
+        <div class="divider">
+          <span>or</span>
+        </div>
+        <div class="oauth-buttons">
+          <button type="button" class="btn oauth-btn google" (click)="loginWith('google')">
+            <i class="fab fa-google"></i>
+          </button>
+          <button type="button" class="btn oauth-btn github" (click)="loginWith('github')">
+            <i class="fab fa-github"></i>
+          </button>
+          <button type="button" class="btn oauth-btn microsoft" (click)="loginWith('microsoft')">
+            <i class="fab fa-microsoft"></i>
+          </button>
+        </div>
+        <div class="links">
+          <a href="#" class="forgot-link">Forgot password?</a>
+          <span>·</span>
+          <a class="signup-link" (click)="newAccount()">Create an account</a>
+        </div>
+      </form>
+    </div>
+  </div>

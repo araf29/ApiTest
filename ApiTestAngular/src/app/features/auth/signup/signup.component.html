@@ -1,0 +1,124 @@
+<div class="signup-container">
+    <div class="signup-card">
+      <div class="signup-header">
+        <h1>Create Account</h1>
+        <p>Join us today! Please fill in the details below.</p>
+      </div>
+  
+      <form (ngSubmit)="onSubmit()" #signupForm="ngForm" class="signup-form">
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            [(ngModel)]="formData.fullName"
+            required
+            placeholder="Enter your full name"
+            class="form-control"
+          />
+        </div>
+  
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            required
+            placeholder="Enter your email"
+            class="form-control"
+          />
+        </div>
+  
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-input">
+            <input
+              [type]="showPassword ? 'text' : 'password'"
+              id="password"
+              name="password"
+              [(ngModel)]="formData.password"
+              required
+              placeholder="Create a password"
+              class="form-control"
+            />
+            <button 
+              type="button" 
+              class="toggle-password"
+              (click)="togglePasswordVisibility('password')"
+            >
+              <i class="fas" [class.fa-eye]="!showPassword" [class.fa-eye-slash]="showPassword"></i>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="password-input">
+            <input
+              [type]="showConfirmPassword ? 'text' : 'password'"
+              id="confirmPassword"
+              name="confirmPassword"
+              [(ngModel)]="formData.confirmPassword"
+              required
+              placeholder="Confirm your password"
+              class="form-control"
+            />
+            <button 
+              type="button" 
+              class="toggle-password"
+              (click)="togglePasswordVisibility('confirmPassword')"
+            >
+              <i class="fas" [class.fa-eye]="!showConfirmPassword" [class.fa-eye-slash]="showConfirmPassword"></i>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Terms and Conditions -->
+        <div class="form-group checkbox-group">
+          <label class="checkbox-container">
+            <input
+              type="checkbox"
+              name="acceptTerms"
+              [(ngModel)]="formData.acceptTerms"
+              required
+            />
+            <span class="checkmark"></span>
+            I agree to the <a href="#">Terms & Conditions</a>
+          </label>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="signup-button" [disabled]="!signupForm.form.valid">
+          Create Account
+        </button>
+  
+        <!-- Login Link -->
+        <p class="login-link">
+          Already have an account? <a (click)="login()">Log in</a>
+        </p>
+  
+        <!-- Social Sign Up -->
+        <div class="social-signup">
+          <p class="divider"><span>Or sign up with</span></p>
+          <div class="social-buttons">
+            <button type="button" class="social-button google">
+              <i class="fab fa-google"></i>
+            </button>
+            <button type="button" class="social-button github">
+              <i class="fab fa-github"></i>
+            </button>
+            <button type="button" class="social-button microsoft">
+              <i class="fab fa-microsoft"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

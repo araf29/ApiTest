@@ -1,0 +1,139 @@
+/* Modern Login Screen Styles */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #dde6f9 100%);
+  }
+  .login-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px 0 rgba(31, 41, 55, 0.1);
+    min-width: 340px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1d3557;
+    font-weight: 600;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    label {
+      margin-bottom: 0.4rem;
+      font-size: 0.96rem;
+      color: #374151;
+    }
+    input {
+      padding: 0.66rem 0.9rem;
+      border-radius: 0.5rem;
+      border: 1.5px solid #cbd5e1;
+      font-size: 1rem;
+      background: #f9fbfd;
+      transition: border 0.2s;
+      &:focus {
+        border-color: #4361ee;
+        outline: none;
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+    padding: 0.7rem 0;
+    margin-bottom: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.04rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+  }
+  .primary-btn {
+    background: #4361ee;
+    color: #fff;
+    margin-bottom: 1.3rem;
+    &:hover {
+      background: #2743b2;
+    }
+  }
+  .divider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.1rem;
+    span {
+      margin: 0 1.1rem;
+      color: #64748b;
+      font-size: 0.97rem;
+      font-weight: 500;
+    }
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #e2e8f0;
+    }
+  }
+  .oauth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    .oauth-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: #f5f7fa;
+      color: #374151;
+      border: 1px solid #d1d5db;
+      &:hover {
+        background: #e9ecf2;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      &.google {
+        border-color: #e2e8f0;
+      }
+      &.github {
+        border-color: #e2e8f0;
+      }
+      &.microsoft {
+        border-color: #e2e8f0;
+      }
+    }
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+    gap: 0.4rem;
+    font-size: 0.97rem;
+    a {
+      color: #4361ee;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    span {
+      color: #cbd5e1;
+    }
+  }
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 1.1rem 0.7rem;
+      min-width: unset;
+    }
+  }

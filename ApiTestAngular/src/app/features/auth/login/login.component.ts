@@ -30,4 +30,8 @@ export class LoginComponent {
       this.toaster.error("Please check your credentials", "Login failed");
     }
   }
+
+  newAccount() {
+    this.router.navigate(['/signup']);
+  }
 }

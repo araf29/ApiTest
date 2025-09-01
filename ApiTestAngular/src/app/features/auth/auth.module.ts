@@ -5,10 +5,11 @@ import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, SignupComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,

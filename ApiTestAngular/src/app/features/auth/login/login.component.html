@@ -17,19 +17,19 @@
         </div>
         <div class="oauth-buttons">
           <button type="button" class="btn oauth-btn google" (click)="loginWith('google')">
-            <img src="/ApiTestAngular/src/assets/icons/google.svg" alt="Google" /> Sign in with Google
+            <i class="fab fa-google"></i>
           </button>
           <button type="button" class="btn oauth-btn github" (click)="loginWith('github')">
-            <img src="/ApiTestAngular/src/assets/icons/github.svg" alt="GitHub" /> Sign in with GitHub
+            <i class="fab fa-github"></i>
           </button>
           <button type="button" class="btn oauth-btn microsoft" (click)="loginWith('microsoft')">
-            <img src="/ApiTestAngular/src/assets/icons/microsoft.svg" alt="Microsoft" /> Sign in with Microsoft
+            <i class="fab fa-microsoft"></i>
           </button>
         </div>
         <div class="links">
           <a href="#" class="forgot-link">Forgot password?</a>
           <span>·</span>
-          <a href="#" class="signup-link">Create an account</a>
+          <a class="signup-link" (click)="newAccount()">Create an account</a>
         </div>
       </form>
     </div>
